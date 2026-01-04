@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Seduxa Models</title>
+
+<style>
+/* RESET TOTAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NEGRO ABSOLUTO */
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #000 !important;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* CONTENEDOR FULLSCREEN REAL */
+body {
+  position: fixed;
+  inset: 0;
+}
+
+/* HUMO */
+.smoke {
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(255,0,180,0.35), transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(0,180,255,0.30), transparent 65%);
+  filter: blur(120px);
+  animation: smoke 45s linear infinite;
+  pointer-events: none;
+}
+
+.smoke.two {
+  animation-duration: 70s;
+  animation-direction: reverse;
+  opacity: 0.6;
+}
+
+@keyframes smoke {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(-10%, -8%); }
+  100% { transform: translate(0,0); }
+}
+
+/* CONTENIDO */
+.app {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TARJETA */
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* LOGO */
+.logo img {
+  width: 100%;
+  max-width: 380px;
+  margin-bottom: 35px;
+  filter: drop-shadow(0 0 40px rgba(255,0,200,1));
+}
+
+/* BOTONES */
+.btn {
+  width: 100%;
+  padding: 18px;
+  margin-bottom: 16px;
+  border-radius: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+}
+
+/* REGISTRO */
+.btn-register {
+  background: linear-gradient(90deg, #ff00cc, #00ccff);
+  color: #000;
+  box-shadow: 0 0 25px rgba(255,0,200,1);
+}
+
+/* ACCESO */
+.btn-login {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.6);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HUMO -->
+<div class="smoke"></div>
+<div class="smoke two"></div>
+
+<!-- APP -->
+<div class="app">
+  <div class="card">
+
+    <div class="logo">
+      <img src="assets/logo.png" alt="Seduxa Models">
+    </div>
+
+    <button class="btn btn-register" onclick="location.href='registro.html'">
+      REGISTRO VIP
+    </button>
+
+    <button class="btn btn-login" onclick="location.href='login.html'">
+      ACCESO VIP
+    </button>
+
+  </div>
+</div>
+
+</body>
+</html>
